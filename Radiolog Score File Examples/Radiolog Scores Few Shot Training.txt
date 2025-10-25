@@ -1,0 +1,12 @@
+Radiolog Scores Few Shot - Training
+"0000.tif": 2.8, Fair
+"0001.tif": 1.8, Poor
+"0002.tif": 3.4, Good
+"0003.tif": 2.0, Fair
+"0004.tif": 2.0, Fair
+"0005.tif": 0.2, Bad
+"0006.tif": 0.6, Bad
+"0007.tif": 4.0, Excellent
+"0008.tif": 0.0, Bad
+"0009.tif": 1.6, Poor
+"0010.tif": 4.0, Excellent
