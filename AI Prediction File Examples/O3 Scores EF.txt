@@ -1,0 +1,12 @@
+EF-O3 Results
+"test000.tif": 2.7, Good
+"test001.tif": 2.2, Fair
+"test002.tif": 0.6, Bad
+"test003.tif": 3.0, Good
+"test004.tif": 3.0, Good
+"test005.tif": 3.1, Good
+"test006.tif": 2.4, Fair
+"test007.tif": 3.7, Good
+"test008.tif": 1.8, Fair
+"test009.tif": 2.8, Good
+"test010.tif": 1.7, Poor

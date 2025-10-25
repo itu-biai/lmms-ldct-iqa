@@ -1,0 +1,12 @@
+O3-LABEL RESULTS WITH NOISE AWARENESS
+"test000.tif": 3.2, Good
+"test001.tif": 1.6, Poor
+"test002.tif": 1.4, Poor
+"test003.tif": 3.2, Good
+"test004.tif": 2.2, Fair
+"test005.tif": 3.6, Good
+"test006.tif": 1.8, Poor
+"test007.tif": 3.6, Good
+"test008.tif": 2.8, Fair
+"test009.tif": 3.2, Good
+"test010.tif": 2.7, Fair

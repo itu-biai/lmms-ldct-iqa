@@ -1,0 +1,11 @@
+test000.png: kidney
+test001.png: pelvis
+test002.png: pelvis
+test003.png: abdomen
+test004.png: abdomen
+test005.png: abdomen
+test006.png: abdomen
+test007.png: abdomen
+test008.png: abdomen
+test009.png: abdomen
+test010.png: pelvis

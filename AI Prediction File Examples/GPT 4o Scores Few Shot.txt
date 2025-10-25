@@ -1,0 +1,12 @@
+GPT API Scores Few Shots Testing
+"test000.tif": 3.6, Good
+"test001.tif": 1.0, Poor
+"test002.tif": 1.8, Poor
+"test003.tif": 2.6, Fair
+"test004.tif": 2.6, Fair
+"test005.tif": 2.8, Fair
+"test006.tif": 3.4, Good
+"test007.tif": 3.4, Good
+"test008.tif": 3.2, Good
+"test009.tif": 2.9, Fair
+"test010.tif": 1.6, Poor

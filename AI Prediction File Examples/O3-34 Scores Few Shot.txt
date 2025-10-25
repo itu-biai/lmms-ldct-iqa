@@ -1,0 +1,12 @@
+O3-34 API Scores Few Shots Testing
+"test000.tif": 3.1, Good
+"test001.tif": 1.7, Poor
+"test002.tif": 1.1, Poor
+"test003.tif": 3.1, Good
+"test004.tif": 3.1, Good
+"test005.tif": 3.3, Good
+"test006.tif": 3.1, Good
+"test007.tif": 3.1, Good
+"test008.tif": 3.1, Good
+"test009.tif": 3.1, Good
+"test010.tif": 2.3, Fair

@@ -1,0 +1,12 @@
+Radiolog Scores Few Shot - Testing
+"test000.tif": 2.6666666666666665, Fair
+"test001.tif": 1.1666666666666667, Poor
+"test002.tif": 0.5, Bad
+"test003.tif": 2.8333333333333335, Fair
+"test004.tif": 1.5, Poor
+"test005.tif": 3.8333333333333335, Good
+"test006.tif": 2.1666666666666665, Fair
+"test007.tif": 4.0, Excellent
+"test008.tif": 2.8333333333333335, Fair
+"test009.tif": 2.3333333333333335, Fair
+"test010.tif": 1.8333333333333333, Poor
