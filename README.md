@@ -1,14 +1,12 @@
 # LMM-IQA: Large Multimodal Model-Based Image Quality Assessment for Low-Dose CT
 
-This repository contains Python scripts and data examples for the evaluation of large multimodal models (LMMs) in low-dose computed tomography (LDCT) image quality assessment.  
-The project investigates how vision-language models perform in scoring LDCT images by comparing zero-shot, few-shot, metadata-guided, and error-feedback scenarios.
+This repository contains Python scripts and data examples for the evaluation of large multimodal models (LMMs) in low-dose computed tomography (LDCT) image quality assessment. The project investigates how vision-language models perform in scoring LDCT images by comparing zero-shot, few-shot, metadata-guided, and error-feedback scenarios.
 
 ---
 
 ## Project Overview
 
-The aim of this project is to assess whether general-purpose multimodal large language models can evaluate CT image quality similarly to radiologists.  
-Each model predicts both a numerical image quality score and a textual explanation. The approach integrates contextual metadata (region and noise level) and uses an error-feedback mechanism to refine predictions.
+The aim of this project is to assess whether general-purpose multimodal large language models can evaluate CT image quality similarly to radiologists. Each model predicts both a numerical image quality score and a textual explanation. The approach integrates contextual metadata (region and noise level) and uses an error-feedback mechanism to refine predictions.
 
 The evaluation includes multiple models such as GPT-4o, Gemini 2.5 Pro, O3, Llama 4, Claude Sonnet 4, Qwen-VL-Max, and Grok 2.
 
@@ -76,6 +74,7 @@ lmms_ldct_iqa/
     ├── Region Labels Train.txt
     └── Region Labels Test.txt
 ```
+
 ---
 
 ## Key Features
@@ -91,79 +90,80 @@ lmms_ldct_iqa/
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/LMM-IQA.git
    cd LMM-IQA
-  conda create -n lmmiqa python=3.10
-  conda activate lmmiqa
-  pip install -r requirements.txt
-  
+   ```
+
+2. **Create and activate a conda environment:**
+   ```bash
+   conda create -n lmmiqa python=3.10
+   conda activate lmmiqa
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
 ## Requirements
 
-All dependencies are listed in requirements.txt.
-Main packages include:
+All dependencies are listed in `requirements.txt`. Main packages include:
 
-torch (≥1.13.0)
+- `torch` (≥1.13.0)
+- `torchvision` (≥0.14.0)
+- `transformers` (≥4.39.0)
+- `openai` (≥1.3.0)
+- `numpy`, `pandas`, `scikit-image`, `opencv-python`, `matplotlib`, `tqdm`
 
-torchvision (≥0.14.0)
-
-transformers (≥4.39.0)
-
-openai (≥1.3.0)
-
-numpy, pandas, scikit-image, opencv-python, matplotlib, tqdm
+---
 
 ## Evaluation Metrics
-The evaluation is based on statistical correlation between radiologist scores and model predictions.
-Three metrics are used:
 
-PLCC (Pearson Linear Correlation Coefficient): Measures linear relationship between AI and radiologist scores.
+The evaluation is based on statistical correlation between radiologist scores and model predictions. Three metrics are used:
 
-SROCC (Spearman Rank Correlation Coefficient): Evaluates rank-order consistency.
+- **PLCC** (Pearson Linear Correlation Coefficient): Measures linear relationship between AI and radiologist scores.
+- **SROCC** (Spearman Rank Correlation Coefficient): Evaluates rank-order consistency.
+- **KROCC** (Kendall Rank Correlation Coefficient): Tests ordinal correlation and robustness to outliers.
 
-KROCC (Kendall Rank Correlation Coefficient): Tests ordinal correlation and robustness to outliers.
+**Overall Score:** Defined as `PLCC + SROCC + KROCC`, providing a unified performance index.
 
-Overall Score: Defined as PLCC + SROCC + KROCC, providing a unified performance index.
+### Running Evaluations
 
-The comparison scripts (e.g., AI-FewShot-IQA-Score-Compare.py and AI-ZeroShot-IQA-Score-Compare.py) automatically:
+The comparison scripts (e.g., `AI-FewShot-IQA-Score-Compare.py` and `AI-ZeroShot-IQA-Score-Compare.py`) automatically:
 
-Read model prediction files from AI Prediction File Examples/
+1. Read model prediction files from `AI Prediction File Examples/`
+2. Load the corresponding radiologist reference files from `Radiolog Score File Examples/`
+3. Match images by filename and compute PLCC, SROCC, and KROCC values4. Print a summary table and optionally export results as `.csv` for plotting
 
-Load the corresponding radiologist reference files from Radiolog Score File Examples/
+**Example usage:**
 
-Match images by filename and compute PLCC, SROCC, and KROCC values
-
-Print a summary table and optionally export results as .csv for plotting
-
-Example usage:
-
+```bash
 python Few-Shot/AI-FewShot-IQA-Score-Compare.py
+```
 
+To add new prediction sets, place them under `AI Prediction File Examples/` and reference them in the script.
 
-To add new prediction sets, place them under AI Prediction File Examples/ and reference them in the script.
+---
 
 ## Citation
 
 If you use this repository or methodology, please cite:
 
-Çelik, K., Ünal, M. O., Yıldırım, İ., Ertaş, M.
-LMM-IQA: Image Quality Assessment for Low-Dose CT Imaging.
-Istanbul Technical University, 2025.
-
-## Citation
-
-If you use this code in your research, please consider citing:
-
 ```bibtex
-@misc{task_adaptive_ct,
-  title={To be filled},
-  author={To be filled},
-  year={To be filled},
-  url={To be filled}
+@article{celik2025lmm,
+  title={LMM-IQA: Image Quality Assessment for Low-Dose CT Imaging},
+  author={Celik, Kagan and Unal, Mehmet Ozan and Ertas, Metin and Yildirim, Isa},
+  journal={arXiv preprint arXiv:2511.07298},
+  year={2025}
 }
 ```
 
+---
+
 ## Contact
 
-For questions and feedback, please open an issue in the GitHub repository.
+For questions and feedback, please open an issue in the GitHub repository or contact the authors directly.
