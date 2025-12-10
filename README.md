@@ -137,8 +137,7 @@ The comparison scripts (e.g., `AI-FewShot-IQA-Score-Compare.py` and `AI-ZeroShot
 
 1. Read model prediction files from `AI Prediction File Examples/`
 2. Load the corresponding radiologist reference files from `Radiolog Score File Examples/`
-3. Match images by filename and compute PLCC, SROCC, and KROCC values
-4. Print a summary table and optionally export results as `.csv` for plotting
+3. Match images by filename and compute PLCC, SROCC, and KROCC values4. Print a summary table and optionally export results as `.csv` for plotting
 
 **Example usage:**
 
@@ -155,14 +154,11 @@ To add new prediction sets, place them under `AI Prediction File Examples/` and 
 If you use this repository or methodology, please cite:
 
 ```bibtex
-@misc{celik2025lmmiqaimagequalityassessment,
-      title={LMM-IQA: Image Quality Assessment for Low-Dose CT Imaging}, 
-      author={Kagan Celik and Mehmet Ozan Unal and Metin Ertas and Isa Yildirim},
-      year={2025},
-      eprint={2511.07298},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2511.07298}, 
+@article{celik2025lmm,
+  title={LMM-IQA: Image Quality Assessment for Low-Dose CT Imaging},
+  author={Celik, Kagan and Unal, Mehmet Ozan and Ertas, Metin and Yildirim, Isa},
+  journal={arXiv preprint arXiv:2511.07298},
+  year={2025}
 }
 ```
 
